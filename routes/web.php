@@ -2,11 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome',
-    [
-        'greeting' => 'Welcome to Spacecards,',
-        'person' => request('person', 'Austrospace')
-    ]
-);
+Route::view('/', 'welcome');
 Route::view('/about', 'about');
 Route::view('/contact', 'contact');
+Route::view('/ideas', 'components.ideas');

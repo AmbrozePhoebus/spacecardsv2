@@ -1,4 +1,5 @@
 <x-layout title="Welcome">
-    <h1>Welcome to Spacecards</h1>
+    <p>{{ $greeting }}</p>
+    <p>Welcome, {{ $person }}!</p>
 
 </x-layout>

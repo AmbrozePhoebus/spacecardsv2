@@ -21,3 +21,10 @@ Route::post('/ideas', function () {
 
     return redirect('/ideas');
 });
+
+// temp
+Route::get('/delete-ideas', function () {
+    session()->forget('ideas');
+
+    return redirect('/ideas');
+});

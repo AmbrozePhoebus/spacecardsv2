@@ -10,6 +10,7 @@ return new class extends Migration
 {
     Schema::table('ideas', function (Blueprint $table) {
         $table->string('idea');
+        $table->string('state');
     });
 }
 

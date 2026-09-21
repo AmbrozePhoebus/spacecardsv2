@@ -147,7 +147,7 @@
 
                         <div class="bg-[#450A0A]/70
                                     border border-[#991B1B]/60
-                                    shadow-[0_8px_0_#4B5563]
+                                    shadow-[0_8px_0_#111827]
                                     rounded-lg
                                     p-6">
 

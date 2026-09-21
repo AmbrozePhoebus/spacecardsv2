@@ -126,6 +126,27 @@
 
                     </div>
 
+                    @auth        
+                    <div class="mt-12 text-center">
+
+        <form method="POST" action="/discover">
+        @csrf
+
+        <button
+            type="submit"
+                class="rounded-lg
+                       bg-[#B8E7FF]/20
+                       border border-[#D9F4FF]/40
+                       text-[#F4FBFF]
+                       px-8 py-3
+                       hover:bg-[#B8E7FF]/30
+                       shadow-[0_0_12px_rgba(185,231,255,0.15)]
+                       transition">
+                Discover a Card
+        </button>
+    </form>
+@endauth
+
                 </div>
 
             </div>

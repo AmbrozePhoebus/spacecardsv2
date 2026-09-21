@@ -14,4 +14,23 @@ class CardController extends Controller
             'cards' => $cards
         ]);
     }
+
+    public function discover()
+    {
+        $card = Card::inRandomOrder()->first();
+
+        request()->user()->cards()->attach($card->id);
+
+        return redirect('/collection')->with('discovered', $card);
+    }
+
+    public function collection()
+{
+    $cards = request()->user()->cards
+        ->groupBy('id');
+
+    return view('collection', [
+        'cards' => $cards
+    ]);
+}
 }

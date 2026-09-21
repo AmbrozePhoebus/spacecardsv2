@@ -67,11 +67,38 @@
         <span class="star star-4">+</span>
         <span class="star star-5">+</span>
 
-        <div class="relative max-w-6xl mx-auto flex items-center space-x-8">
-            <a href="/" class="hover:text-gray-300">Home</a>
-            <a href="/cards" class="hover:text-gray-300">Cards</a>
-            <a href="/collection" class="hover:text-gray-300">My Collection</a>
-        </div>
+<div class="relative max-w-6xl mx-auto flex items-center space-x-8">
+
+    <a href="/" class="hover:text-gray-300">Home</a>
+    <a href="/cards" class="hover:text-gray-300">Cards</a>
+
+    @auth
+        <a href="/collection" class="hover:text-gray-300">
+            My Collection
+        </a>
+
+        <span class="text-[#D9F4FF]/60">
+            {{ auth()->user()->name }}
+        </span>
+
+        <form method="POST" action="/logout">
+            @csrf
+
+            <button type="submit" class="hover:text-gray-300">
+                Log out
+            </button>
+        </form>
+    @else
+        <a href="/login" class="hover:text-gray-300">
+            Log in
+        </a>
+
+        <a href="/register" class="hover:text-gray-300">
+            Register
+        </a>
+    @endauth
+
+</div>
 
     </nav>
 
